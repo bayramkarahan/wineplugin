@@ -1,0 +1,11 @@
+Package: winemimetype
+Version: 1.0
+Architecture: all
+Depends: 
+Pre-Depends:
+Recommends: 
+Maintainer: Bayram Karahan [bayramk@gmail.com]
+Conflicts: 
+Replaces: 
+Provides: winemimetype
+Description: winemimetype eklenti

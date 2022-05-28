@@ -1,0 +1,16 @@
+#!/bin/sh
+
+sed -i '/application\/x-ms-dos-executable/d' /usr/share/applications/mimeinfo.cache
+sed -i '/application\/x-ms-dos-executable/d' /usr/share/applications/gnome-mimeapps.list
+
+for item in $(ls /usr/share/applications/)
+do
+	if [ $item != 'mimeinfo.cache' ] 
+	then
+		#echo $item
+		sed -i 's/application\/x-ms-dos-executable;//g' /usr/share/applications/$item
+	fi
+done
+
+
+exit 0
