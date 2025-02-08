@@ -10,8 +10,10 @@ done
 
 for item in $(ls /home)
 do
-#echo $item
-sed -i '/application\/x-ms-dos-executable/d' /home/$item/.local/applications/mimeapps.list
+	if [ ! -f /home/$item/.local/applications/mimeapps.list ]; then
+		#echo $item
+		sed -i '/application\/x-ms-dos-executable/d' /home/$item/.local/applications/mimeapps.list
+	fi
 done
 
 exit 0
